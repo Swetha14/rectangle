@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rectangle Color Change</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+        <script>          
+window.onload =  function(){
+    spectrum();
+    spectrum1();
+};
+         function spectrum(){
+            var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+       document.getElementById("leftcolumn").style.backgroundColor=hue;
+         }
+         function spectrum1(){
+            var hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
+       document.getElementById("rightcolumn").style.backgroundColor=hue;	
+         }
+       
+        function changeColor1()
+        {
+         var hue = 'rgb(' + (Math.floor(Math.random() * 225)) + ',' + (Math.floor(Math.random() * 225)) + ',' + (Math.floor(Math.random() * 225)) + ')';
+        document.getElementById("rightcolumn").style.backgroundColor=hue;
+        }
+        function changeColor2()
+        {
+         var hue = 'rgb(' + (Math.floor(Math.random() * 225)) + ',' + (Math.floor(Math.random() * 225)) + ',' + (Math.floor(Math.random() * 225)) + ')';
+         document.getElementById("leftcolumn").style.backgroundColor=hue;
+        }
+ </script>
+ </head>
+<body>
+<div id="wrapper">
+	<div id="header">
+	<h1>Rectangle Random Color Change </h1>
+	</div>
+        <div id="leftcolumn" onclick="changeColor1();">        
+        </div>
+        <div id="rightcolumn" onclick="changeColor2();">        
+        </div>
+	<div id="footer">
+	</div>
+</div>       
+</body>
+</html>
